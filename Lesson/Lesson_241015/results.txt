@@ -1,0 +1,6 @@
+Calling: simple((<__main__.Calculator object at 0x10071d7f0>, 115249), {}
+ Time: 0.0024268627166748047
+
+Calling: simple((<__main__.Calculator object at 0x1012217f0>, 115249), {}
+ Time: 0.0024318695068359375
+

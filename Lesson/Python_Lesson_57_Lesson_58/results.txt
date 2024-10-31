@@ -1,0 +1,42 @@
+Calling: simple((<__main__.Calculator object at 0x104e78410>, 115249), {}
+ Time: 0.003992795944213867
+
+Calling: simple((<__main__.Calculator object at 0x100df0410>, 115249), {}
+ Time: 0.004106998443603516
+
+Calling: simple((<__main__.Calculator object at 0x10446c350>, 115249), {}
+ Time: 0.0039081573486328125
+
+Calling: simple((<__main__.Calculator object at 0x1053270d0>, 115249), {}
+ Time: 0.08382105827331543
+
+Calling: simple((<__main__.Calculator object at 0x104efc6d0>, 115249), {}
+ Time: 0.0036678314208984375
+
+Calling: simple((<__main__.Calculator object at 0x102818610>, 115249), {}
+ Time: 0.0036859512329101562
+
+Calling: simple((<__main__.Calculator object at 0x102758810>, 115249), {}
+ Time: 0.004058837890625
+
+Calling: simple((<__main__.Calculator object at 0x1045fc810>, 115249), {}
+ Time: 0.004029273986816406
+
+Calling: simple((<__main__.Calculator object at 0x102c10810>, 115249), {}
+ Time: 0.004031181335449219
+
+Calling: simple((<__main__.Calculator object at 0x1004c4f50>, 115249), {}
+ Time: 0.003795146942138672
+
+Calling: simple((<__main__.Calculator object at 0x100758f50>, 115249), {}
+ Time: 0.00368499755859375
+
+Calling: simple((<__main__.Calculator object at 0x102a04f90>, 115249), {}
+ Time: 0.003899812698364258
+
+Calling: simple((<__main__.Calculator object at 0x104bc0f90>, 115249), {}
+ Time: 0.0041980743408203125
+
+Calling: simple((<__main__.Calculator object at 0x1026c0f90>, 115249), {}
+ Time: 0.004190921783447266
+
