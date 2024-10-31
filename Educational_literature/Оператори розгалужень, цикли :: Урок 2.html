@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Оператори розгалужень, цикли :: Урок 2</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/img/favicon/site.webmanifest">
+<link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<link href="https://materials.itstep.org/css/style.css?t=1724782948" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/monokai-sublime.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<script>
+        let isCompiled = 0
+    </script>
+<header class="header">
+<div class="content">
+<div class="menu-btn menu-btn--active"></div>
+<nav id="nav" class="d-flex flex-column flex-shrink-0 p-3 navbar"></nav>
+<p class="title">Оператори розгалужень, цикли</p>
+</div>
+<img class="logo" src="/img/logo.svg">
+</header>
+<main class="page" style="background-color: #2FAA4F">
+<div class="wrap main-active">
+<p class="subject">Python Core </p>
+<div class="info-wrap">
+<div class="type" style="color:#2FAA4F;background-color: #2FAA4F30">Уроки</div>
+</div>
+<div class="image_wrap">
+<img class="cover_image" src="https://fsx1.itstep.org/api/v1/files/V0MubKVTLeOhPtxhvHdtMtQ9zjETJISL" alt>
+</div>
+<div class="fr-wrapper" data-codelang="py"><div><div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<h1 style="text-align: center;"><br>
+<span style="color: rgb(47, 170, 79);">Оператори розгалужень, цикли</span></h1>
+<p style="text-align: justify;"><br></p>
+<h2 style="text-align: justify;">1. Вступ</h2>
+<p style="text-align: justify;">У попередньому модулі ми розглядали приклади, в яких інструкції виконувалися послідовно. Однак, іноді потрібно пропустити деякі інструкції або обрати інструкцію, яка буде виконана. У програмуванні, для надання варіативності використання та багатофункціональності, застосовуються умовні конструкції, конструкції для обробки винятків та цикли.</p>
+<p style="text-align: justify;">У цьому модулі будуть детально розглянуті:</p>
+<ul>
+<li style="text-align: justify;">особливості роботи з операторами розгалуження і їх комбінування;</li>
+<li style="text-align: justify;">особливості обробки винятків і їх типізація;</li>
+<li style="text-align: justify;">цикли, їх типи і особливості використання.</li>
+</ul>
+<p><br></p>
+<h2 style="text-align: justify;">2. Умовні інструкції та їх синтаксис</h2>
+<p style="text-align: justify;">Оператори розгалужень (або умовні інструкції) дозволяють будувати прості конструкції, які перенаправляють виконання програми подібно до ліфта, що визначає загальну вагу пасажирів і на підставі цієї інформації починає переміщатися або повідомляти про перевантаження. Також, прикладом такої конструкції слугує сканер відбитків пальців, який дає або відмовляє в доступі, залежно від їх збігу з відбитками зареєстрованих користувачів.</p>
+<p style="text-align: justify;">У загальному випадку, для побудови умовної конструкції потрібно:</p>
+<ul>
+<li style="text-align: justify;">вказати оператор розгалуження;</li>
+<li style="text-align: justify;">розділити оператор та умову пробілом;</li>
+<li style="text-align: justify;">вказати умову;</li>
+<li style="text-align: justify;">поставити двокрапку в кінці умови;</li>
+<li style="text-align: justify;">вказати набір інструкцій;</li>
+<li style="text-align: justify;">відокремити набір інструкцій відступом.</li>
+</ul>
+<p style="text-align: justify;"><span class="fr-img-caption back-process fr-dib fr-bordered" style="width: 674px;"><span class="fr-img-wrap"><img src="https://fsx1.itstep.org/api/v1/files/bUzGH27yxFCSRmng-Str-1s6w1m1PRVa" alt="e3irSSMk82QKRJkUbEojUYeP3k6-rway" class="back-process fr-dib fr-bordered"><span class="fr-inner">Figure 1</span></span></span></p>
+<p style="text-align: justify;">У програмуванні умови також називають логічними виразами. Але ми спочатку з'ясуємо, що являють собою логічні вирази та набори інструкцій.</p>
+<h3 style="text-align: justify;">2.1. Логічні вирази та оператори</h3>
+<p style="text-align: justify;">Поряд з арифметичними та іншими операціями, у програмуванні використовуються операції порівняння, які дозволяють створювати логічні вирази на підставі порівнянь, і логічні операції, які дозволяють комбінувати декілька логічних виразів в один.</p>
+<p style="text-align: justify;">Логічні вирази &mdash; будь-які конструкції, результатом виконання яких є <span style="color: rgb(147, 101, 184);">True&nbsp;</span>або <span style="color: rgb(147, 101, 184);">False</span>.</p>
+<p style="text-align: justify;">Людська довіра демонструє роботу логічних виразів. Щоразу, коли ми чуємо якесь висловлювання, ми або віримо в це ( тобто вважаємо за правду), або відносимося до цього з недовірою ( тобто вважаємо хибним). Наприклад, якщо ваш друг покликав вас на прогулянку і сказав, що надворі гарна погода, може статися дві ситуації:</p>
+<ul>
+<li style="text-align: justify;">ви визирнете у вікно і переконаєтеся, що погода дійсно хороша ( тобто ствердження друга правдиве), і ви підете на прогулянку;</li>
+<li style="text-align: justify;">ви визирнете у вікно і побачите, що погода погана ( тобто ствердження друга хибне), і ви залишитеся вдома.</li>
+</ul>
+<p style="text-align: justify;">Звичайно, насправді ми можемо сумніватися, однак у програмуванні оцінка виразів завжди зводиться до одного з цих двох варіантів. Для уявлення істини або неправди використовуються ключові слова <span style="color: rgb(147, 101, 184);">True</span> та <span style="color: rgb(147, 101, 184);">False</span>.</p>
+<h4 style="text-align: justify;">2.1.1. Операції порівняння</h4>
+<p style="text-align: justify;">Операції порівняння використовуються для створення умов спираючись на порівняння елементів. Елементи, до яких застосовується операція, називають операндами. Python підтримує наступні операції порівняння:</p>
+<ul>
+<li><span style="color: rgb(147, 101, 184);">==&nbsp;</span>&mdash; «Дорівнює»: істинно (<span style="color: rgb(147, 101, 184);">True</span>), якщо обидва операнди рівні, інакше &mdash; хибне (<span style="color: rgb(147, 101, 184);">False</span>);</li>
+<li style="text-align: justify;"><span style="color: rgb(147, 101, 184);">!=</span> &mdash; «Не дорівнює»: істинно (<span style="color: rgb(147, 101, 184);">True</span>), якщо обидва операнди не рівні, інакше &mdash; хибне (<span style="color: rgb(147, 101, 184);">False</span>);</li>
+<li style="text-align: justify;"><span style="color: rgb(147, 101, 184);">&gt;</span> &mdash; «Більше ніж»: істинно (<span style="color: rgb(147, 101, 184);">True</span>), якщо перший операнд більший за другий, інакше &mdash; хибне (<span style="color: rgb(147, 101, 184);">False</span>);</li>
+<li style="text-align: justify;"><span style="color: rgb(147, 101, 184);">&lt;</span> &mdash; «Менше ніж»: істинно (<span style="color: rgb(147, 101, 184);">True</span>), якщо перший операнд менший за другий, інакше &mdash; хибне (<span style="color: rgb(147, 101, 184);">False</span>);</li>
+<li style="text-align: justify;"><span style="color: rgb(147, 101, 184);">&gt;=</span> &mdash; «Більше або дорівнює»: істинно (<span style="color: rgb(147, 101, 184);">True</span>), якщо перший операнд більше або дорівнює другому, інакше &mdash; хибне (<span style="color: rgb(147, 101, 184);">False</span>);</li>
+<li>
+<div>
+<div style="text-align: justify;"><span style="color: rgb(147, 101, 184);">&lt;=</span> &mdash; «Менше або дорівнює»: істинно (<span style="color: rgb(147, 101, 184);">True</span>), якщо перший операнд менше або дорівнює другому, інакше &mdash; хибне (<span style="color: rgb(147, 101, 184);">False</span>).</div>
+</div>
+</li>
+</ul>
+<div>
+<p style="text-align: justify;">Зліва представлен код, який демонструє результати операцій порівняння з цілими числами. Праворуч відображаються результати нашого коду в консолі.</p>
+<pre translate="no">print("1 == 1:", 1 == 1)         |  1 == 1: True
+print("1 == 2:", 1 == 2)         |  1 == 2: False
+print("1 != 1:", 1 != 1)         |  1 != 1: False
+print("1 != 2:", 1 != 2)         |  1 != 2: True
+print("1 &gt; 1:", 1 &gt; 1)           |  1 &gt; 1: False
+print("1 &gt; 2:", 1 &gt; 2)           |  1 &gt; 2: False
+print("2 &gt; 1:", 2 &gt; 1)           |  2 &gt; 1: True
+print("1 &lt; 1:", 1 &lt; 1)           |  1 &lt; 1: False
+print("1 &lt; 2:", 1 &lt; 2)           |  1 &lt; 2: True
+print("2 &lt; 1:", 2 &lt; 1)           |  2 &lt; 1: False
+print("1 &gt;= 1:", 1 &gt;= 1)         |  1 &gt;= 1: True
+print("1 &gt;= 2:", 1 &gt;= 2)         |  1 &gt;= 2: False
+print("2 &gt;= 1:", 2 &gt;= 1)         |  2 &gt;= 1: True
+print("1 &lt;= 1:", 1 &lt;= 1)         |  1 &lt;= 1: True
+print("1 &lt;= 2:", 1 &lt;= 2)         |  1 &lt;= 2: True
+print("2 &lt;= 1:", 2 &lt;= 1)         |  2 &lt;= 1: False</pre></div>
+<h4 style="text-align: justify;">2.1.2. Використання значень у якості умов</h4>
+<p style="text-align: justify;">В Python існують правила, за якими можна привести будь-яке значення будь-якого типу до логічного. Так, якщо замість умови написати рядок або число, програма замінить його на <span style="color: rgb(147, 101, 184);">True</span> або <span style="color: rgb(147, 101, 184);">False</span>.</p>
+<p style="text-align: justify;">Значення, які будуть замінені на <span style="color: rgb(147, 101, 184);">False</span>:</p>
+<ul>
+<li style="text-align: justify;">структури, які не містять елементів:
+<ul>
+<li style="text-align: justify;">рядки без символів;</li>
+<li style="text-align: justify;">порожні списки, словники, масиви і т.д.</li>
+</ul>
+</li>
+<li style="text-align: justify;">нулі будь-яких чисельних типів:
+<ul>
+<li style="text-align: justify;"><span style="color: rgb(147, 101, 184);">0</span>;</li>
+<li style="text-align: justify;"><span style="color: rgb(147, 101, 184);">0.0</span>.</li>
+</ul>
+</li>
+<li style="text-align: justify;">константа <span style="color: rgb(147, 101, 184);">None</span>.</li>
+</ul>
+<p style="text-align: justify;">Значення, які будуть замінені на <span style="color: rgb(147, 101, 184);">True</span>:</p>
+<ul>
+<li style="text-align: justify;">структури, які містять елементи:
+<ul>
+<li style="text-align: justify;">рядки будь-якої довжини, відмінної від нуля;</li>
+<li style="text-align: justify;">списки, словники, масиви і т.д. з елементами;</li>
+</ul>
+</li>
+<li style="text-align: justify;">не нульові значення будь-яких чисельних типів:
+<ul>
+<li style="text-align: justify;"><span style="color: rgb(147, 101, 184);">1</span>, <span style="color: rgb(147, 101, 184);">2</span>, <span style="color: rgb(147, 101, 184);">3…</span>;</li>
+<li style="text-align: justify;"><span style="color: rgb(147, 101, 184);">0.1</span>, <span style="color: rgb(147, 101, 184);">1.2</span>, <span style="color: rgb(147, 101, 184);">2.3…</span> .</li>
+</ul>
+</li>
+</ul>
+<p style="text-align: justify;">За допомогою функції <span style="color: rgb(147, 101, 184);">bool()</span> можна перевірити результат будь-якого такого пере&shy;творення:</p>
+<pre translate="no">print(bool(""))                          | False
+print(bool(0.0))                         | False
+print(bool(None))                        | False
+print(bool("IT Step Academy"))           | True
+print(bool(1))                           | True</pre>
+<p style="text-align: justify;">Зліва представлен код, який демонструє результати операцій порівняння з цілими числами. Праворуч відображається результат нашого коду в консолі.</p>
+<h4 style="text-align: justify;">2.1.3. Логічні операції</h4>
+<p style="text-align: justify;">Логічні операції дозволяють комбінувати декілька логічних виразів в один. В Python є такі логічні оператори:</p>
+<ul>
+<li style="text-align: justify; color: rgb(147, 101, 184);">and</li>
+</ul>
+<p style="text-align: justify;">«Логічне множення»: повертає <span style="color: rgb(147, 101, 184);">True</span>, якщо обидва вирази дорівнюють <span style="color: rgb(147, 101, 184);">True</span>. Наприклад, роботодавець, який зацікавлений у хорошому співробітнику, візьме людину на роботу, якщо вона компетентна І відповідальна:</p>
+<pre style="text-align: justify;" translate="no">competent = True
+responsible = False
+print(competent and responsible)</pre>
+<p>Результат роботи нашого коду в консолі:</p>
+<pre translate="no">False</pre>
+<p style="text-align: justify;">Якщо ж людина компетентна, але не відповідальна:</p>
+<pre style="text-align: justify;" translate="no">competent = True
+responsible = True
+print(competent and responsible)</pre>
+<p>Результат роботи нашого коду в консолі:</p>
+<pre translate="no">True</pre>
+<ul>
+<li style="text-align: justify; color: rgb(147, 101, 184);">or</li>
+</ul>
+<p style="text-align: justify;">«Логічне додавання»: повертає <span style="color: rgb(147, 101, 184);">True</span>, якщо хоча б один із виразів дорівнює <span style="color: rgb(147, 101, 184);">True</span>. Наприклад, роботодавець, який зацікавлений найняти співробітника у найкоротший термін, візьме людину на роботу, якщо вона компетентна АБО відповідальна:</p>
+<pre translate="no">competent = True
+responsible = False
+print(competent or responsible)</pre>
+<p style="text-align: justify;">Результат роботи нашого коду в консолі:</p>
+<pre style="text-align: justify;" translate="no">True</pre>
+<p style="text-align: justify;">Якщо ж людина не компетентна і не відповідальна:</p>
+<pre translate="no">competent = False
+responsible = False
+print(competent or responsible)</pre>
+<p style="text-align: justify;">Результат роботи нашого коду в консолі:</p>
+<pre style="text-align: justify;" translate="no">False</pre>
+<ul>
+<li style="text-align: justify; color: rgb(147, 101, 184);">not</li>
+</ul>
+<p style="text-align: justify;">«Логічне заперечення»: повертає значення, зворотне операнду. Наприклад, роботодавець НЕ візьме людину, яка раніше була звільнена:</p>
+<pre translate="no">previously_fired = True
+print(not previously_fired)</pre>
+<p style="text-align: justify;">Результат роботи нашого коду в консолі:</p>
+<pre style="text-align: justify;" translate="no">False</pre>
+<p style="text-align: justify;">В іншому випадку:</p>
+<pre translate="no">previously_fired = False
+print(not previously_fired)</pre>
+<p style="text-align: justify;">Результат роботи нашого коду в консолі:</p>
+<pre style="text-align: justify;" translate="no">True</pre>
+<p style="text-align: justify;">Зверніть увагу, якщо один із операндів оператора <span style="color: rgb(147, 101, 184);">and</span> повертає <span style="color: rgb(147, 101, 184);">False</span>, то інший операнд не оцінюється, оскільки результатом виконання оператора у будь-якому випадку буде <span style="color: rgb(147, 101, 184);">False</span>. Аналогічно, якщо один із операндів оператора or повертає <span style="color: rgb(147, 101, 184);">True</span>, то другий операнд не оцінюється, тому що результат виконання оператора в будь-якому випадку буде <span style="color: rgb(147, 101, 184);">True</span>.</p>
+<p style="text-align: justify;">Розглянемо роботу логічних операцій на простому прикладі: повертаючись додому, особа захотіла скористуватися метро. Вона пам'ятає, що метро працює з <span style="color: rgb(147, 101, 184);">6:00</span> до <span style="color: rgb(147, 101, 184);">24:00</span> (або <span style="color: rgb(147, 101, 184);">0</span>). Щоб проїхати, їй необхідно пред'явити квиток або сплатити поїздку, крім того, її не пустять з великим багажем. На годинник особа ще не дивилася, квиток забула вдома, грошей на проїзд не вистачає і вона без багажу:</p>
+<pre translate="no">time = int(input("Enter the current time in hours: ")) % 24
+ticket = False
+money = True
+luggage = False
+print(money or ticket and not luggage and time &gt; 6)</pre>
+<p style="text-align: justify;">На перший погляд, наша умова вірна. Проте, вона істинна незалежно від значень <span style="color: rgb(147, 101, 184);">time</span> і <span style="color: rgb(147, 101, 184);">luggage</span>.</p>
+<p style="text-align: justify;">Класичний приклад з математики свідчить <span style="color: rgb(147, 101, 184);">2 + 2 х 2 = 6</span>, тому що спочатку потрібно помножити, а потім додати. Такий спеціальний порядок обчислень визначено пріоритетом операцій. Таке є і в логічних операціях: спочатку виконується <span style="color: rgb(147, 101, 184);">not</span>, потім <span style="color: rgb(147, 101, 184);">and</span> і <span style="color: rgb(147, 101, 184);">or</span>. Саме тому <span style="color: rgb(147, 101, 184);">or</span> виконується наостанок і поверне <span style="color: rgb(147, 101, 184);">True</span>. Як і з математичними операціями, для перевизначення порядку виконання можна використовувати дужки:</p>
+<pre translate="no">print((money or ticket) and not luggage and time &gt; 6)</pre>
+<p style="text-align: justify;">На практиці, найпростішим прикладом застосування логічних виразів є <span style="color: rgb(147, 101, 184);">if</span>: Якщо умова істинна &mdash; виконується набір інструкцій:</p>
+<pre translate="no">car_speed = 100
+if car_speed &gt; 50:
+    print("Car is faster than 50 km/h")</pre>
+<p style="text-align: justify;">У цьому випадку, результатом виконання коду буде виведення на консоль рядка «<em>You have at least 3 flowers</em>», оскільки вираз <span style="color: rgb(147, 101, 184);">2 &lt; 3</span> істинний.</p>
+<pre translate="no">passenger_weight = 400
+if passenger_weight &lt; 300:
+    print("The elevator can go")</pre>
+<p>У цьому прикладі ліфт не зможе поїхати і рядок «<em>The elevator can go</em>» не буде виведений на консоль, оскільки вираз <span style="color: rgb(147, 101, 184);">400 &lt; 300</span> помилковий.</p>
+<p style="text-align: justify;">Розглянемо приклад застосування логічних операцій з <span style="color: rgb(147, 101, 184);">if</span>:</p>
+<pre translate="no">car_speed = 100
+if car_speed &gt; 50 and car_speed &lt; 150:
+    print("Car speed is between 50 km/h and 150 km/h")</pre>
+<p style="text-align: justify;">У цьому прикладі рядок «<em>Car speed is between 50 km/h and 150 km/h</em>» буде виведений у разі, якщо змінна «<span style="color: rgb(147, 101, 184);">car_speed</span>» перебуватиме у проміжку від <span style="color: rgb(147, 101, 184);">50</span> до <span style="color: rgb(147, 101, 184);">150</span> (не включно). Python дозволяє записати таку умову подібно до подвійної нерівності в математиці:</p>
+<pre translate="no">if 50 &lt; car_speed &lt; 150:</pre>
+<p style="text-align: justify;">Відомо, що високосним роком вважається той рік, який кратний <span style="color: rgb(147, 101, 184);">4</span>, не кратний <span style="color: rgb(147, 101, 184);">100</span> або кратний <span style="color: rgb(147, 101, 184);">400</span>. Запишемо умовний вираз, який визначає, чи є рік високосним:</p>
+<pre translate="no">year = 2000
+if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
+    print("Year", year, "is leap")</pre>
+<h3 style="text-align: justify;">2.2. Поняття «виконання блоку»</h3>
+<p style="text-align: justify;">До цього ми розглядали загальний випадок використання оператора розгалуження, в якому згадувався «набір інструкцій». Однак, як визначити, що інструкція належить до цього набору або, іншими словами, до «блоку виконання»?</p>
+<h4 style="text-align: justify;">2.2.1. Визначення блоку виконання</h4>
+<p style="text-align: justify;">В Python, на відміну від багатьох інших мов програмування, інструкції, які належать до одного блоку виконання, достатньо виділити однаковим відступом. Кінцем блоку виконання вважається остання інструкція, яка буде виділена відповідним відступом.</p>
+<p style="text-align: justify;">В іграх подібним чином визначаються комбінації або «комбо»: успішні дії, що йдуть одна за одною, утворюють «комбо», яке переривається, як тільки дія буде виконана невдало. Розглянемо приклад блоку виконання:</p>
+<pre translate="no">if 1 &gt; 4: # line 1
+    print("This is the start of an execution block")                     # line 2
+    print("This is part of the execution block")                         # line 3
+    print("This is still part of the execution block")                   # line 4
+    print("This is the end of an execution block")                       # line 5
+    print("It is not part of the execution block")                       # line 6</pre>
+<p style="text-align: justify;">У цьому випадку результатом виконання коду буде виведення на консоль рядка «<em>It is not part of the execution block</em>», Оскільки вираз <span style="color: rgb(147, 101, 184);">1 &gt; 4</span> хибний та інструкції, що належать до блоку виконання конструкції, не будуть виконані. Зокрема, до нього належать рядки від <span style="color: rgb(147, 101, 184);">2</span> до <span style="color: rgb(147, 101, 184);">5</span>. Відступи мають складатися з пробілів і, відповідно до <a href="https://www.python.org/dev/peps/pep-0008/" target="_blank">інструкції з оформлення коду</a>, їх кількість бажано робити кратною <span style="color: rgb(147, 101, 184);">4</span> (тобто <span style="color: rgb(147, 101, 184);">4</span> пробіли, <span style="color: rgb(147, 101, 184);">8</span>, <span style="color: rgb(147, 101, 184);">16 ...</span>). Хоча, якщо блок буде виділений відступом у 2 пробіли, програма також працюватиме. Крім того, в останніх версіях мови для відступу не можна використовувати табуляцію, проте інтегровані середовища розробки (у скороченому варіанті «<span style="color: rgb(147, 101, 184);">IDE</span>») автоматично розміщують 4 пробіли при натисканні кнопки «<span style="color: rgb(147, 101, 184);">Tab</span>» на кла&shy;віа&shy;турі.</p>
+<h4 style="text-align: justify;">2.2.2. Застосування</h4>
+<p style="text-align: justify;">Визначення блоків виконання необхідне при використанні умовних конструкцій. Вони також використовуються в:</p>
+<ul>
+<li style="text-align: justify;">циклах;</li>
+</ul>
+<pre translate="no">while condition:
+    print("Cycles")</pre>
+<ul>
+<li style="text-align: justify;">обробці винятків;</li>
+</ul>
+<pre translate="no">try:
+    print("Some code")
+except:
+    print("Error processing")
+finally:
+    print("Handling Exceptions")</pre>
+<ul>
+<li style="text-align: justify;">функціях;</li>
+</ul>
+<pre translate="no">def function():
+    print("Functions")</pre>
+<ul>
+<li style="text-align: justify;">класах.</li>
+</ul>
+<pre translate="no">class Class:
+    def __init__(self):
+        print("Classes")</pre>
+<p>З цими конструкціями ви ознайомитеся пізніше.</p>
+<h3 style="text-align: justify;">2.3. Оператори розгалуження if …else</h3>
+<p style="text-align: justify;">Тепер, коли ви навчилися виокремлювати інструкції в блоки, складати і комбінувати вирази, можна розпочати розгляд умовних конструкцій. Раніше був наведений найпростіший приклад використання умовної конструкції <span style="color: rgb(147, 101, 184);">if</span>:</p>
+<pre translate="no">car_speed = 100
+if car_speed &gt; 50:
+    print("Car is faster than 50 km/h")</pre>
+<p>Спробуймо розширити цей приклад спираючись на отримані знання. Введемо дві змінні, що позначають швидкість (в км/год) машини і мотоцикла відповідно:</p>
+<pre translate="no">car_speed = 150
+motorcycle_speed = 100</pre>
+<p>У такому разі наш приклад можна змінити за допомогою змінних:</p>
+<pre translate="no">if car_speed &gt; motorcycle_speed:
+    print("Car is faster than motorcycle")</pre>
+<p>Результат роботи нашого коду в консолі:</p>
+<pre translate="no">Car is faster than motorcycle</pre>
+<p style="text-align: justify;">Якщо змінити швидкість так, що машина виявиться швидшою, наша умова виявиться помилковою і користувач не отримає жодної інформації. У такому разі зручно використовувати else-блок, який виконується лише якщо остання умова виявилася хибною. Додаємо його до нашого прикладу:</p>
+<pre translate="no">car_speed = 100
+motorcycle_speed = 150
+if car_speed &gt; motorcycle_speed:
+    print("Car is faster than motorcycle")
+else:
+    print("Motorcycle is faster than car")</pre>
+<p>Результат роботи нашого коду в консолі:</p>
+<pre translate="no">Motorcycle is faster than car</pre>
+<p style="text-align: justify;">Швидкості можуть зрівнятися і, хоча блок <span style="color: rgb(147, 101, 184);">else</span> виконається, представлена користувачеві інформація буде неправильною. Виправити це можна, додавши ще одну умову:</p>
+<pre translate="no">car_speed = 100
+motorcycle_speed = 100
+if car_speed &gt; motorcycle_speed:
+    print("Car is faster than motorcycle")
+if motorcycle_speed &gt; car_speed:
+    print("Motorcycle is faster than car")
+else:
+    print("Car and motorcycle are equally fast")</pre>
+<p>Результат роботи нашого коду в консолі:</p>
+<pre translate="no">Car and motorcycle are equally fast</pre>
+<p style="text-align: justify;">Тут умовні конструкції виконуються по черзі: спочатку перевіряється умова <span style="color: rgb(147, 101, 184);">motorcycle_speed &lt; car_speed</span>, потім <span style="color: rgb(147, 101, 184);">motorcycle_speed &gt; car_speed</span>. Зверніть увагу, що друга умова буде перевірена незалежно від істини першої. Корисність такої поведінки ситуативна: якщо ці конструкції самостійні і передбачають як незалежне, так і спільне виконання &mdash; це корисно, проте якщо вони пов'язані і передбачається виконання лише однієї конструкції &mdash; це може призвести до помилок. Цей приклад добре підходить для порівняння постійних швидкостей. Якщо за час порівняння швидкість мотоцикла зміниться, ми отримаємо два суперечливі результати:</p>
+<pre translate="no">car_speed = 130
+motorcycle_speed = 100
+if car_speed &gt; motorcycle_speed:
+    print("Car is faster than motorcycle")
+    motorcycle_speed += 50
+if motorcycle_speed &gt; car_speed:
+    print("Motorcycle is faster than car")
+    motorcycle_speed += 50
+else:
+    print("Car and motorcycle are equally fast")
+    motorcycle_speed += 50</pre>
+<p style="text-align: justify;">Результат роботи нашого коду в консолі:</p>
+<pre translate="no">Car is faster than motorcycle
+Motorcycle is faster than car</pre>
+<p style="text-align: justify;">Так, при першому порівнянні умова <span style="color: rgb(147, 101, 184);">motorcycle_speed &lt; car_speed</span> буде істинною, швидкість мотоцикла зміниться, і при другому порівнянні <span style="color: rgb(147, 101, 184);">motorcycle_speed &gt; car_speed</span> також виявиться істинною. Уникнути такої ситуації можна, об'єднавши дві умови в одну конструкцію. Для цього замінимо другий <span style="color: rgb(147, 101, 184);">if</span> на <span style="color: rgb(147, 101, 184);">elif</span> &mdash; комбінацію блоків <span style="color: rgb(147, 101, 184);">else</span> і <span style="color: rgb(147, 101, 184);">if</span>, набір інструкцій якого виконується, якщо умови попередніх блоків помилкові, а власна умова блоку є істинною:</p>
+<pre translate="no">if car_speed &gt; motorcycle_speed:
+    print("Car is faster than motorcycle")
+    motorcycle_speed += 50
+elif motorcycle_speed &gt; car_speed:
+    print("Motorcycle is faster than car")
+    motorcycle_speed += 50
+else:
+    print("Car and motorcycle are equally fast")
+    motorcycle_speed += 50</pre>
+<p style="text-align: justify;">Результат роботи нашого коду в консолі:</p>
+<pre style="text-align: justify;" translate="no">Car is faster than motorcycle</pre>
+<h3 style="text-align: justify;">2.4. Вкладені конструкції</h3>
+<p style="text-align: justify;">Блоки виконання <span style="color: rgb(147, 101, 184);">if</span>, <span style="color: rgb(147, 101, 184);">elif</span> та <span style="color: rgb(147, 101, 184);">else</span> можуть містити інші умовні конструкції, які називають «вкладеними». Блок виконання вкладених конструкцій також має бути відділений відступом, що утворює свого роду новий «крок»:</p>
+<pre translate="no">flowers_amount = 3
+if flowers_amount&gt; 2:
+    print("You have at least 3 flowers")
+    if flowers_amount&lt; 5:
+        print(""You have less than 5 flowers")</pre>
+<p style="text-align: justify;">За допомогою вкладених конструкцій можна продемонструвати принцип роботи блоку <span style="color: rgb(147, 101, 184);">elif</span>. Припустимо, що користувач проходить тест і має вибрати один із варіантів відповіді, ввівши його номер:</p>
+<pre translate="no">number = int(input("Enter the answer number: "))
+if number == 1:
+    print("You've chosen answer A")
+else:
+    if number == 2:
+        print("You've chosen answer B")
+    else:
+        if number == 3:
+            print("You've chosen answer C")
+        else:
+            if number == 4:
+                print("You've chosen answer D")
+            else:
+                print("There is no such answer.")</pre>
+<p>Результат роботи нашого коду в консолі:</p>
+<pre translate="no">Enter the answer number: 4
+You've chosen answer D</pre>
+<p style="text-align: justify;">Такий код, побудований з використанням вкладеності, можна спростити, використовуючи <span style="color: rgb(147, 101, 184);">elif</span>. При цьому, результат виконання коду не зміниться:</p>
+<pre translate="no">number = int(input("Enter the answer number: "))
+
+if number == 1:
+    print("You've chosen answer A")
+elif number == 2:
+    print("You've chosen answer B")
+elif number == 3:
+    print("You've chosen answer C")
+elif number == 4:
+    print("You've chosen answer D")
+else:
+    print("There is no such answer.")</pre>
+<p style="text-align: justify;">Розглянемо практичне застосування вкладених конструкцій на прикладі скарб&shy;нички:</p>
+<pre translate="no">account = int(input("Enter how much you put: "))
+account = abs(account)
+
+if account &gt; 0:
+    withdrawal = int(input("Enter how much you take: "))
+    withdrawal = abs(withdrawal)
+    if withdrawal &lt; account:
+        account -= withdrawal
+        print("Here are your", withdrawal, ".")
+        print("There are", account, "left.")
+    else:
+        print("There are only", account, ".")
+else:
+        print("There are no money in piggy bank")</pre>
+<p style="text-align: justify;">У цьому прикладі для введення користувачем суми, яку він поклав у скарбничку, використовують рядки:</p>
+<pre translate="no">account = int(input("Enter how much you put: "))
+account = abs(account)</pre>
+<p style="text-align: justify;">Причому, за отримання від користувача рядка та приведення його до цілого числа відповідає перший рядок, а другий рядок використовує функцію <span style="color: rgb(147, 101, 184);">abs()</span>, результатом якої є модуль переданого їй числа. Подібна конструкція використовується для отримання суми, яку користувач хоче забрати зі скарбнички.</p>
+<p style="text-align: justify;">З прикладу видно, що забрати гроші (незалежно від того, чи достатньо їх чи ні) можна, тільки якщо вони є в скарбничці. Цей приклад можна спростити, використовуючи розглянуті раніше правила приведення будь-яких типів до логічного. Оскільки <span style="color: rgb(147, 101, 184);">account</span> &mdash; позитивне число (завдяки використанню функції <span style="color: rgb(147, 101, 184);">abs()</span>), а нульові значення чисел зводяться до <span style="color: rgb(147, 101, 184);">False</span>, ми можемо замінити <span style="color: rgb(147, 101, 184);">account &gt; 0</span> на <span style="color: rgb(147, 101, 184);">account</span> не змінивши при цьому поведінку програми.</p>
+<p style="text-align: justify;"><br></p>
+<h2 style="text-align: justify;">3. Цикли</h2>
+<p style="text-align: justify;">Щодня ми стикаємося з циклами &mdash; процесом виконання однотипних дій. Хорошим прикладом циклу є тренування, коли спортсмену необхідно виконати певний рух декілька разів для успішного виконання вправи. Навіть підйом сходами так само є циклом, тому що для цього необхідно кілька разів піднятися на наступну сходинку. Циклічність має властивість закінчуватися. Відтак, досягнувши потрібного поверху, людина не підніматиметься на наступну сходинку, а спортсмен закінчить вправу, коли виконає необхідну кількість повторень.</p>
+<h3 style="text-align: justify;">3.1. Поняття ітерації</h3>
+<p style="text-align: justify;">Ітерація &mdash; окреме повторення однотипної дії, під якою ми розуміємо блок виконання циклу («тіло циклу»). Повертаючись до прикладу зі сходами, ітерацією вважатиметься підйом на нову сходинку.</p>
+<h3 style="text-align: justify;">3.2. Цикл while</h3>
+<p style="text-align: justify;">Насамперед розглянемо цикл «<span style="color: rgb(147, 101, 184);">while</span>», синтаксис якого ідентичний конструкції «<span style="color: rgb(147, 101, 184);">if</span>». Такий цикл повторює виконання тіла циклу доти, доки відповідна умова не виявиться хибною:</p>
+<pre translate="no">number = 1
+while number &lt; 3:
+    print(number, "is greater than 0 and less than 3")
+    number += 1</pre>
+<p>Результат роботи нашого коду в консолі:</p>
+<pre translate="no">1 is greater than 0 and less than 3
+2 is greater than 0 and less than 3</pre>
+<p style="text-align: justify;">Розглянемо роботу циклу покроково:</p>
+<ol>
+<li style="text-align: justify;">Створення змінної &nbsp;«<span style="color: rgb(147, 101, 184);">number</span>» зі значенням <span style="color: rgb(147, 101, 184);">1</span>;</li>
+<li style="text-align: justify;">Перевірка умови циклу «<span style="color: rgb(147, 101, 184);">number &lt; 3</span>»: оскільки умова є істинною, виконується тіло циклу;</li>
+<li style="text-align: justify;">Виконується тіло циклу: на консоль виводиться рядок, значення «<span style="color: rgb(147, 101, 184);">number</span>» збіль&shy;шується на <span style="color: rgb(147, 101, 184);">1</span>;</li>
+<li style="text-align: justify;">Перевірка умови циклу «<span style="color: rgb(147, 101, 184);">number &lt; 3</span>»: оскільки умова є істинною, виконується тіло циклу;</li>
+<li style="text-align: justify;">Виконується тіло циклу: на консоль виводиться рядок, значення «<span style="color: rgb(147, 101, 184);">number</span>» збільшується на <span style="color: rgb(147, 101, 184);">1</span>;</li>
+<li style="text-align: justify;">Перевірка умови циклу «<span style="color: rgb(147, 101, 184);">number &lt; 3</span>»: оскільки умова помилкова, виконання циклу і програми закінчено.</li>
+</ol>
+<p style="text-align: justify;">Інакше кажучи, тіло циклу, яке представлене рядками <span style="color: rgb(147, 101, 184);">3</span> та <span style="color: rgb(147, 101, 184);">4</span>, повториться двічі, оскільки після другого повторення змінна «<span style="color: rgb(147, 101, 184);">number</span>» матиме значення <span style="color: rgb(147, 101, 184);">3</span> і умова «<span style="color: rgb(147, 101, 184);">number &lt; 3</span>» виявиться хибною. Зверніть увагу, що перевірка істинності умови циклу виконується лише після виконання останньої інструкції тіла. Якщо поміняти місцями рядки <span style="color: rgb(147, 101, 184);">3</span> та <span style="color: rgb(147, 101, 184);">4</span>, цикл також виконається двічі, але представлена інформація для користувача виявиться хибною, оскільки на момент виконання «<span style="color: rgb(147, 101, 184);">print()</span>» значення «<span style="color: rgb(147, 101, 184);">number</span>» вже не задовольнятиме умові:</p>
+<pre translate="no">number = 1
+while number &lt; 3:
+    number += 1
+    print(number, "is greater than 0 and less than 3")</pre>
+<p>Результат роботи нашого коду в консолі:</p>
+<pre translate="no">2 is greater than 0 and less than 3
+3 is greater than 0 and less than 3</pre>
+<p style="text-align: justify;">Спробуємо знайти суму всіх цілих чисел, розташованих між «<span style="color: rgb(147, 101, 184);">х1</span>» та «<span style="color: rgb(147, 101, 184);">х2</span>». Для цього використовуємо цикл «<span style="color: rgb(147, 101, 184);">while</span>» наступним чином:</p>
+<pre translate="no">x1 = int(input("Enter x1: "))
+x2 = int(input("Enter x2: "))
+x = x1 + 1
+sum = 0
+while x &lt; x2:
+    sum += x
+    x += 1
+print("The sum of all integers between", x1, "and", x2, "is", sum)</pre>
+<p>Результат роботи нашого коду в консолі:</p>
+<pre translate="no">Enter x1: -13
+Enter x2: 17
+The sum of all integers between -13 and 17 is 58</pre>
+<p style="text-align: justify;">У цьому прикладі ми створюємо змінну «<span style="color: rgb(147, 101, 184);">x</span>», якій присвоюємо перше ціле число після «<span style="color: rgb(147, 101, 184);">х1</span>» «<span style="color: rgb(147, 101, 184);">х1 + 1</span>», і «<span style="color: rgb(147, 101, 184);">sum</span>» для зберігання проміжного результату підсумовування. Цикл розпочнеться лише в тому випадку, якщо у проміжку від «<span style="color: rgb(147, 101, 184);">х1</span>» до «<span style="color: rgb(147, 101, 184);">х2</span>» є хоча б одне ціле число. В інакшому випадку, умова «<span style="color: rgb(147, 101, 184);">x &lt; x2</span>" не буде виконаною, цикл буде пропущено, і сума так і залишиться <span style="color: rgb(147, 101, 184);">0</span>. У кожній ітерації циклу ми додаємо до проміжного результату «<span style="color: rgb(147, 101, 184);">sum</span>», «<span style="color: rgb(147, 101, 184);">x</span>» (одне з чисел у проміжку від «<span style="color: rgb(147, 101, 184);">х1</span>» до «<span style="color: rgb(147, 101, 184);">х2</span>»), після чого замінюємо його на наступне «<span style="color: rgb(147, 101, 184);">x + 1</span>». Коли до «<span style="color: rgb(147, 101, 184);">sum</span>» буде додано останнє значення проміжку від «<span style="color: rgb(147, 101, 184);">х1</span>» до «<span style="color: rgb(147, 101, 184);">х2</span>», його подальше збільшення «<span style="color: rgb(147, 101, 184);">x + 1</span>» призведе до того, що умова «<span style="color: rgb(147, 101, 184);">x &lt; x2</span>» виявиться хибною і цикл буде завершено. Таким чином, у змінній «<span style="color: rgb(147, 101, 184);">sum</span>» будуть послідовно підсумовані усі числа у зазначеному користувачем проміжку.</p>
+<h3 style="text-align: justify;">3.3. Цикл for</h3>
+<p style="text-align: justify;">Цикли типу «<span style="color: rgb(147, 101, 184);">for</span>», на відміну від «<span style="color: rgb(147, 101, 184);">while</span>», повторюються не залежно від виконання умови, а для кожного елемента у списку, множині, кортежі або іншій сукупності елементів. Інакше кажучи, для кожної ітерації циклу використовується один із елементів сукупності. Наприклад, щоб перевірити придатність продуктів харчування в магазині, людина має послідовно взяти кожен продукт зі свого кошика і переконатися, що термін придатності ще не минув. Так, кошик із продуктами виступає як сукупність елементів. Продукти є елементами, а перевірка терміну придатності одного продукту &mdash; ітерацією циклу.</p>
+<p style="text-align: justify;">Рядок може виступати як сукупність елементів, оскільки він є сукупністю символів. Спробуємо вивести усі елементи рядка окремо:</p>
+<pre style="text-align: justify;" translate="no">line = input("Enter some string: ")
+for c in line:
+    print(c)</pre>
+<p>Результат роботи нашого коду в консолі:</p>
+<pre translate="no">Enter some string: ItStep
+I
+t
+S
+t
+e
+p</pre>
+<p style="text-align: justify;">Цикл може пройти рядками частково. І тому, необхідно розділити строку за допомогою оператора зрізу «<span style="color: rgb(147, 101, 184);">[::]</span>». «<span style="color: rgb(147, 101, 184);">line[start, stop, step]</span>» повертає усі елементи рядка «<span style="color: rgb(147, 101, 184);">line</span>» від «<span style="color: rgb(147, 101, 184);">start</span>» (включно) до «<span style="color: rgb(147, 101, 184);">stop</span>» (не включно). Крок визначає, як і наскільки збільшуватиметься індекс. Іншими словами, крок вказує на те, який символ рядка буде прийнято за наступний. Значення «<span style="color: rgb(147, 101, 184);">start</span>» за замовчуванням &mdash; <span style="color: rgb(147, 101, 184);">0</span>, «<span style="color: rgb(147, 101, 184);">step</span>» &mdash; <span style="color: rgb(147, 101, 184);">1,</span> «<span style="color: rgb(147, 101, 184);">stop</span>» за замовчуванням відповідає індексу останнього елемента рядка. Детальніше, цей оператор буде розглянуто у наступних модулях, тому зупинимося на тих його властивостях, які знадобляться нам для презентації робіт. Нижче наведено приклад коду, який виконує ітерацію за першими шістьма літерами рядка:</p>
+<pre style="text-align: justify;" translate="no">line = input("Enter some string: ")
+for c in line[0 : 6 : 1]:
+    print(c)</pre>
+<p>Результат роботи нашого коду в консолі:</p>
+<pre translate="no">Enter some string: ItStepAcademy
+I
+t
+S
+t
+e
+p</pre>
+<p style="text-align: justify;">В «<span style="color: rgb(147, 101, 184);">[0:6:1]</span>» <span style="color: rgb(147, 101, 184);">0</span> означає, що зріз починається з початку рядка, <span style="color: rgb(147, 101, 184);">6</span> &mdash; індекс останнього елемента у зрізі не перевищує <span style="color: rgb(147, 101, 184);">6</span> (у нашому випадку, 6-й символ &mdash; перша «<span style="color: rgb(147, 101, 184);">s</span>»), а <span style="color: rgb(147, 101, 184);">1</span> означає, що символи у зріз будуть додаватися зліва направо без пробілу. <span style="color: rgb(147, 101, 184);">0</span> і <span style="color: rgb(147, 101, 184);">1</span> у прикладі вище &mdash; значення, які використовуються оператором за замовчуванням, тому надалі значення за замовчуванням будуть пропущені. Змінюючи значення кроку, можна вивести усі символи, які стоять на парних позиціях:</p>
+<pre translate="no">line = input("Enter some string: ")
+for c in line[: : 2]:
+    print(c)</pre>
+<p style="text-align: justify;">Результат роботи нашого коду в консолі:</p>
+<pre style="text-align: justify;" translate="no">Enter some string: ItStepAcademy
+I
+S
+e
+A
+a
+e
+y</pre>
+<p style="text-align: justify;">У прикладі «<span style="color: rgb(147, 101, 184);">[ : : 2]</span>» означає, що у зрізі буде пропущений кожний другий символ початкового рядка. Крім того, якщо використовувати негативне значення як крок, перебір відбуватиметься у зворотний бік:</p>
+<pre style="text-align: justify;" translate="no">line = input("Enter some string: ")
+for c in line[: : -1]:
+    print(c)</pre>
+<p style="text-align: justify;">Результат роботи нашого коду в консолі:</p>
+<pre style="text-align: justify;" translate="no">Enter some string: ItStep
+p
+e
+t
+S
+t
+I</pre>
+<p style="text-align: justify;">«<span style="color: rgb(147, 101, 184);">[ : : -1]</span>» означає, що рядок буде інвертовано: його кінець стане початком, а початок &mdash; кінцем.</p>
+<h3 style="text-align: justify;">3.4. Нескінченні цикли</h3>
+<p style="text-align: justify;">Визначення циклу «<span style="color: rgb(147, 101, 184);">while</span>» говорить наступне: «такий цикл повторює виконання тіла циклу до тих пір, доки відповідна умова не виявиться хибною». Неважко уявити ситуацію, в якій умова так і не виявиться хибною. У такому разі цикл виконуватиметься нескінченно:</p>
+<pre style="text-align: justify;" translate="no">while True:
+    print("Hello!")</pre>
+<p>Результат роботи нашого коду в консолі:</p>
+<pre translate="no">Hello!
+Hello!
+Hello!
+Hello!
+...</pre>
+<p style="text-align: justify;">Найчастіше нескінченні цикли є результатом помилки написання програми (програма складена таким чином, що передбачена умова виходу із циклу ніколи не виконається), наприклад:</p>
+<pre style="text-align: justify;" translate="no">number = 0
+while number != 15:
+    number += 2
+    print(number, "is still not 15")</pre>
+<p style="text-align: justify;">Результат роботи нашого коду в консолі:</p>
+<pre style="text-align: justify;" translate="no">...
+10 is still not 15
+12 is still not 15
+14 is still not 15
+16 is still not 15
+18 is still not 15
+...</pre>
+<p style="text-align: justify;">Оскільки «<span style="color: rgb(147, 101, 184);">number</span>» спочатку дорівнює <span style="color: rgb(147, 101, 184);">0</span> і в ході виконання програми залишається парним, він ніколи не стане дорівнювати <span style="color: rgb(147, 101, 184);">15</span> і не зробить умову помилковою.</p>
+<p style="text-align: justify;">Нескінченні цикли можуть застосовуватися для обробки серверами клієнтських запитів або, наприклад, щоб продемонструвати нескінченні величини:</p>
+<pre style="text-align: justify;" translate="no">import time
+number = 1
+while True:
+    print(number, "is natural number")
+    number += 1
+    time.sleep(0.1)</pre>
+<p style="text-align: justify;">Результат роботи нашого коду в консолі:</p>
+<pre style="text-align: justify;" translate="no">1 is natural number
+2 is natural number
+3 is natural number
+4 is natural number
+5 is natural number
+...</pre>
+<p style="text-align: justify;">У цьому прикладі інструкція «<span style="color: rgb(147, 101, 184);">import time</span>» необхідна для використання «<span style="color: rgb(147, 101, 184);">time.<wbr>sleep()</wbr></span>», яка, у свою чергу, зупиняє виконання програми на <span style="color: rgb(147, 101, 184);">0.1</span> секунду, аби користувач встиг побачити виведені на екран цифри. Ви можете приблизно оцінити швидкість виконання інструкцій програмою, прибравши ці дві інструкції.</p>
+<h3 style="text-align: justify;">3.5. Вкладені конструкції</h3>
+<p style="text-align: justify;">Подібно до умовних конструкцій, цикли також можуть містити в собі інші цикли та конструкції. Розглянемо приклад виведення таблиці множення:</p>
+<pre translate="no">for i in range(1, 10):
+    for j in range(1, 10):
+        print(i * j, end="\t")
+    print("\n")</pre>
+<p style="text-align: justify;">Результат роботи нашого коду в консолі:</p>
+<pre style="text-align: justify;" translate="no">1 2 3 4 5 6 7 8 9
+2 4 6 8 10 12 14 16 18
+3 6 9 12 15 18 21 24 27
+4 8 12 16 20 24 28 32 36
+5 10 15 20 25 30 35 40 45
+6 12 18 24 30 36 42 48 54
+7 14 21 28 35 42 49 56 63
+8 16 24 32 40 48 56 64 72
+9 18 27 36 45 54 63 72 81</pre>
+<p style="text-align: justify;">Тут внутрішній цикл виконується 9 разів на кожній ітерації зовнішнього циклу, яких теж 9. Таблиця множення виходить вдало, оскільки у тілі внутрішнього циклу ми виводимо значення елементів обох циклів.</p>
+<p style="text-align: justify;">Розглянемо ще один приклад: людині необхідно піднятися на 5-й поверх. Наразі вона знаходиться на першому поверсі, між кожними двома поверхами по 20 сходинок. Пройшовши 70 сходинок поспіль, людина втомлюється і зупиняється, щоб відпочити:</p>
+<pre style="text-align: justify;" translate="no">floor = 1
+energy = 70
+print("I'm on the", floor, "floor")
+while floor != 5:
+    step = 0
+    while step != 20:
+        step += 1
+        energy -= 1
+        if energy == 0:
+            print("I'm tired, I will rest a little")
+            energy += 70
+    floor += 1
+    print("Now I'm on the", floor, "floor")
+print("I've got to the right floor")</pre>
+<p style="text-align: justify;">Результат роботи нашого коду в консолі:</p>
+<pre style="text-align: justify;" translate="no">I'm on the 1 floor
+Now I'm on the 2 floor
+Now I'm on the 3 floor
+Now I'm on the 4 floor
+I'm tired, I will rest a little
+Now I'm on the 5 floor
+I've got to the right floor</pre>
+<p style="text-align: justify;">Наведений код демонструє, що кожна ітерація циклу «<span style="color: rgb(147, 101, 184);">while floor != 5:</span>» виконує вкладений цикл, а вкладений цикл виконує конструкцію «<span style="color: rgb(147, 101, 184);">if</span>».</p>
+<h3 style="text-align: justify;">3.6. Керуючі оператори continue, break, else</h3>
+<p style="text-align: justify;">Для керування виконанням циклу використовуються оператори «<span style="color: rgb(147, 101, 184);">continue</span>», «<span style="color: rgb(147, 101, 184);">break</span>» та «<span style="color: rgb(147, 101, 184);">else</span>», які дозволяють пропустити ітерацію або виконати набір інструкцій після успішного завершення відповідного циклу. Розглянемо приклади їх використання.</p>
+<h4 style="text-align: justify;">3.6.1. break</h4>
+<p style="text-align: justify;">Оператор «<span style="color: rgb(147, 101, 184);">break</span>» використовується для переривання виконання циклу.</p>
+<pre style="text-align: justify;" translate="no">x = 1
+while x &lt; 10:
+    print(x)
+    x += 1
+    break</pre>
+<p>Результат роботи нашого коду в консолі:</p>
+<pre translate="no">1</pre>
+<p style="text-align: justify;">У цьому прикладі на консоль виведено лише «<span style="color: rgb(147, 101, 184);">1</span>», оскільки у першій ітерації виконався оператор «<span style="color: rgb(147, 101, 184);">break</span>» і цикл був перерваний.</p>
+<p style="text-align: justify;">Якщо у прикладі зі сходами, людина, піднявшись на 3-й поверх, скористається ліфтом, код можна змінити так:</p>
+<pre style="text-align: justify;" translate="no">floor = 1
+energy = 70
+print("I'm on the", floor, "floor")
+while floor != 5:
+    step = 0
+    if floor == 3:
+        print("I will take an elevator")
+        break
+     while step != 20:
+        step += 1
+        energy -= 1
+        if energy == 0:
+            print("I'm tired, I will rest a little")
+            energy += 70
+    floor += 1
+    print("Now i'm on the", floor, "floor")
+print("I've got to the right floor")</pre>
+<p style="text-align: justify;">Результат роботи нашого коду в консолі:</p>
+<pre translate="no">I'm on the 1 floor
+Now i'm on the 2 floor
+Now i'm on the 3 floor
+I will take an elevator
+I've got to the right floor</pre>
+<p style="text-align: justify;">Тут, дійшовши до 3-го поверха, використовується оператор «<span style="color: rgb(147, 101, 184);">break</span>», який перериває цикл підйому сходами. Зверніть увагу: під час використання оператора «<span style="color: rgb(147, 101, 184);">break</span>» у вкладеному циклі, зовнішній цикл перервано не буде:</p>
+<pre style="text-align: justify;" translate="no">number = 0
+while number &lt; 5:
+    print(number)
+    while True:
+        number += 1
+        break
+        number -= 1</pre>
+<p style="text-align: justify;">Результат роботи нашого коду в консолі:</p>
+<pre style="text-align: justify;" translate="no">0
+1
+2
+3
+4</pre>
+<p style="text-align: justify;">У наведеному прикладі також бачимо, що за допомогою «<span style="color: rgb(147, 101, 184);">break</span>» можна перервати нескінченний цикл. Ця особливість може бути корисною для створення циклів з пост-умовою. Ви вже могли помітити, що цикл «<span style="color: rgb(147, 101, 184);">while</span>» виконує перевірку умови перед виконанням тіла циклу, тому можлива ситуація, коли умова буде хибною і тіло циклу не виконається у жодному разі. В інших мовах, для уникнення подібної ситуації можна використовувати цикл «<span style="color: rgb(147, 101, 184);">do …while</span>» («цикл із пост-умовою»), в якому спочатку виконується тіло циклу, а потім перевіряється умова. В Python такого циклу немає, але його нескладно створити самому. Припустимо, що ми хочемо зробити цикл із пост-умовою з іншого, раніше створеного циклу «<span style="color: rgb(147, 101, 184);">while</span>»:</p>
+<pre style="text-align: justify;" translate="no">number = 1
+while number &lt; 5:
+    print(number)
+    number += 1</pre>
+<p style="text-align: justify;">Результат роботи нашого коду в консолі:</p>
+<pre style="text-align: justify;" translate="no">1
+2
+3
+4</pre>
+<p style="text-align: justify;">Для цього замінимо умову циклу на «<span style="color: rgb(147, 101, 184);">while</span>», що зробить його нескінченним, і помістимо оператор «<span style="color: rgb(147, 101, 184);">break</span>» в умовну конструкцію, яка використовує умову в кінці тіла циклу, протилежну первісному циклу:</p>
+<pre style="text-align: justify;" translate="no">number = 1
+while True:
+    print(number)
+    number += 1
+    if number &gt;= 5:
+        break</pre>
+<p style="text-align: justify;">Результат роботи нашого коду в консолі:</p>
+<pre translate="no">1
+2
+3
+4</pre>
+<p style="text-align: justify;">Якби ми використовували початкову умову завершення циклу «<span style="color: rgb(147, 101, 184);">number &lt; 5</span>», оператор «<span style="color: rgb(147, 101, 184);">break</span>» припиняв би виконання циклу всім значенням «<span style="color: rgb(147, 101, 184);">number</span>», які нам підходять (<span style="color: rgb(147, 101, 184);">1</span>, <span style="color: rgb(147, 101, 184);">2</span>, <span style="color: rgb(147, 101, 184);">3</span>, <span style="color: rgb(147, 101, 184);">4</span>, тобто <span style="color: rgb(147, 101, 184);">&lt; 5</span>), і робив би цикл нескінченним усім невідповідним значенням (<span style="color: rgb(147, 101, 184);">&gt;= 5</span>). Тому, умову необхідно замінити на протилежну. Інакше кажучи, у початковому циклі умова вказувала на необхідність продовження повторень, а в циклі з пост-умовою нам потрібно, щоб вона вказувала на необхідність їх припинення. Хорошим прикладом для розуміння такої поведінки є сама мова. Одну фразу ми можемо передати двома способами:</p>
+<ul>
+<li style="text-align: justify;">Я продовжуватиму радіти, доки меніне виповниться 100 років.</li>
+<li style="text-align: justify;">Я припиню радіти, коли мені виповниться 100 років.</li>
+</ul>
+<p style="text-align: justify;">У нашому випадку очевидно, що протилежну умову можна отримати, використовуючи інший оператор порівняння («<span style="color: rgb(147, 101, 184);">&gt;=</span>»), але для складніших умов розумніше змінювати умову, використовуючи логічний оператор «<span style="color: rgb(147, 101, 184);">not</span>»:</p>
+<pre translate="no">if not (number &lt; 5):</pre>
+<p style="text-align: justify;">У прикладі отриманого циклу ми бачимо, що його тіло виконається один раз, навіть якщо умова «<span style="color: rgb(147, 101, 184);">number &lt; 5</span>» на початку помилкова:</p>
+<pre style="text-align: justify;" translate="no">number = 5
+while True:
+    print(number)
+    number += 1
+    if not (number &lt; 5):
+        break</pre>
+<p style="text-align: justify;">Результат роботи нашого коду в консолі:</p>
+<pre style="text-align: justify;" translate="no">5</pre>
+<h4 style="text-align: justify;">3.6.2. continue</h4>
+<p style="text-align: justify;">Оператор «<span style="color: rgb(147, 101, 184);">continue</span>» використовується для переривання поточної ітерації циклу. Це корисно, якщо необхідно лишити деякі ітерації і дозволяє уникнути вкладеності коду. Розглянемо обидві ситуації. Припустимо, у нас є цикл, який виводить п'ять послідовних чисел:</p>
+<pre style="text-align: justify;" translate="no">number = 0
+count = 0
+while count &lt; 5:
+    number += 1
+    print(number)
+    count += 1</pre>
+<p>Результат роботи нашого коду в консолі:</p>
+<pre style="text-align: justify;" translate="no">1
+2
+3
+4
+5</pre>
+<p style="text-align: justify;">Його можна змінити таким чином, щоб на екран було виведено 5 послідовних парних чисел, використовуючи «<span style="color: rgb(147, 101, 184);">continue</span>» за умови, якщо залишок від ділення числа на два не дорівнює <span style="color: rgb(147, 101, 184);">0</span> (тобто число непарне):</p>
+<pre style="text-align: justify;" translate="no">number = 0
+count = 0
+while count &lt; 5:
+    number += 1
+    if (number % 2) == 1:
+        continue
+    print(number)
+    count += 1</pre>
+<p style="text-align: justify;">Результат роботи нашого коду в консолі:</p>
+<pre style="text-align: justify;" translate="no">2
+4
+6
+8
+10</pre>
+<p style="text-align: justify;">Для розгляду уникнення вкладеності коду припустимо, що необхідно визначити, які з чисел від <span style="color: rgb(147, 101, 184);">0</span> до <span style="color: rgb(147, 101, 184);">300</span> поділяються на <span style="color: rgb(147, 101, 184);">3</span>, <span style="color: rgb(147, 101, 184);">3</span> і<span style="color: rgb(147, 101, 184);">&nbsp;5</span> або на <span style="color: rgb(147, 101, 184);">3</span>, <span style="color: rgb(147, 101, 184);">5</span> і <span style="color: rgb(147, 101, 184);">7</span> одночасно. Тоді код буде виглядати так:</p>
+<pre style="text-align: justify;" translate="no">number = 0
+while number &lt; 300:
+    number += 1
+    if number % 3 == 0 and number % 5 != 0:
+        print(number, "divides by 3")
+    elif number % 3 == 0:
+        if number % 5 == 0 and number % 7 != 0:
+            print(number, "divides by 3 and 5")
+        elif number % 5 == 0 and number % 7 == 0:
+            print(number, "divides by 3 and 5 and 7")</pre>
+<p style="text-align: justify;">Тут остання інструкція перебуває на 3-му рівні вкладеності, тобто код вкладений одночасно у <span style="color: rgb(147, 101, 184);">3</span> конструкції. Використовуючи «<span style="color: rgb(147, 101, 184);">continue</span>», можна розділити ці конструкції, закінчуючи ітерацію, якщо умова хибна:</p>
+<pre style="text-align: justify;" translate="no">number = 0
+while number &lt; 300:
+    number += 1
+    if number % 3 != 0:
+        continue
+    elif number % 5 != 0:
+        print(number, "divides by 3")
+    elif number % 7 != 0:
+        print(number, "divides by 3 and 5")
+    else:
+        print(number, "divides by 3 and 5 and 7")</pre>
+<p style="text-align: justify;">Перевага такої конструкції в тому, що вона дозволяє одночасно розділити умови, спростивши їх, і знизити рівень вкладеності коду, тим самим спрощуючи його читання. Як і оператор «<span style="color: rgb(147, 101, 184);">break</span>», «<span style="color: rgb(147, 101, 184);">continue</span>» завершує ітерацію лише для вкладеного циклу, тоді як ітерація зовнішнього циклу триває.</p>
+<h4 style="text-align: justify;">3.6.3. else</h4>
+<p style="text-align: justify;">На відміну від умовних конструкцій, у яких «<span style="color: rgb(147, 101, 184);">else</span>» виконується тільки якщо умова хибна, «<span style="color: rgb(147, 101, 184);">else</span>» в циклах виконується у разі, якщо цикл було успішно завершено. Наприклад, якщо дитина порахувала від <span style="color: rgb(147, 101, 184);">1</span> до <span style="color: rgb(147, 101, 184);">5</span>, вона може сказати, що порахувала від <span style="color: rgb(147, 101, 184);">1</span> до<span style="color: rgb(147, 101, 184);">&nbsp;5</span>:</p>
+<pre style="text-align: justify;" translate="no">number = 1
+while number &lt;= 5:
+    print(number)
+    number += 1
+else:
+    print("I've counted from 1 to 5!")</pre>
+<p>Результат роботи нашого коду в консолі:</p>
+<pre translate="no">1
+2
+3
+4
+5
+I've counted from 1 to 5!</pre>
+<p style="text-align: justify;">Не очевидно, навіщо використовувати цей блок якщо «<span style="color: rgb(147, 101, 184);">print()</span>» можна розташувати поза тілом циклу і результат буде той самий. Проте, якщо дитина забула кілька цифр, наприклад <span style="color: rgb(147, 101, 184);">4</span> і <span style="color: rgb(147, 101, 184);">5</span>, вона не зможе порахувати далі і сказати, що порахувала від <span style="color: rgb(147, 101, 184);">1</span> до <span style="color: rgb(147, 101, 184);">5</span>:</p>
+<pre style="text-align: justify;" translate="no">number = 1
+while number &lt;= 5:
+    if number == 4:
+        break
+    print(number)
+    number += 1
+else:
+    print("I've counted from 1 to 5!")</pre>
+<p>Результат роботи нашого коду в консолі:</p>
+<pre style="text-align: justify;" translate="no">1
+2
+3</pre>
+<p style="text-align: justify;">В такому випадку цикл не буде вважатися успішно завершеним і блок «<span style="color: rgb(147, 101, 184);">else</span>» не буде виконаний. Крім того, перервати успішне виконання циклу можуть оператори «<span style="color: rgb(147, 101, 184);">raise</span>» і «<span style="color: rgb(147, 101, 184);">return</span>» (детальніше про «<span style="color: rgb(147, 101, 184);">return</span>» ми розглянемо у наступних модулях).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="copyright">
+<p></p>
+<p>© STEP IT Academy, <a href="https://itstep.org" target="_blank">itstep.org</a></p>
+<p>
+Усі права на фото-, аудіо- і відеотвори, що охороняються авторським
+правом і фрагменти яких використані в матеріалі, належать їх законним
+власникам. Фрагменти творів використовуються в ілюстративних цілях
+в обсязі, виправданому поставленим завданням, у рамках учбового
+процесу і в учбових цілях, відповідно до законодавства про вільне використання
+твору без згоди його автора (або іншої особи, яка має авторське
+право на цей твір). Обсяг і спосіб цитованих творів відповідає прийнятим
+нормам, не завдає збитку нормальному використанню об’єктів авторського
+права і не обмежує законні інтереси автора і правовласників.
+Цитовані фрагменти творів на момент використання не можуть бути
+замінені альтернативними аналогами, що не охороняються авторським
+правом, і відповідають критеріям добросовісного використання і чесного
+використання.
+Усі права захищені. Повне або часткове копіювання матеріалів заборонене.
+Узгодження використання творів або їх фрагментів здійснюється
+з авторами і правовласниками. Погоджене використання матеріалів
+можливе тільки якщо вказано джерело.
+Відповідальність за несанкціоноване копіювання і комерційне використання
+матеріалів визначається чинним законодавством.
+</p>
+</div>
+</div>
+</main>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://materials.itstep.org/js/script.js?t=1724782948"></script>
+</body>
+</html>
